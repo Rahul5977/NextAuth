@@ -1,10 +1,19 @@
-export default function ProfileIdPage({params}:any) {
+export default function ProfileIdPage({ params }: any) {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold mb-4 text-gray-800">Profile Details of {params.id}</h1>
-      <p className="text-lg text-gray-600">
-        This is the profile details page for user {params.id}.
-      </p>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black">
+      <h1 className="text-4xl font-bold mb-4 text-white">
+        Code{" "}
+        <span className="bg-orange-500 text-black px-2 py-1 rounded">
+          {params.id}
+        </span>
+      </h1>
+      {/* <p className="text-lg text-white">
+        This is the profile details page for user{" "}
+        <span className="bg-orange-500 text-black px-2 py-1 rounded">
+          {params.id}
+        </span>
+        .
+      </p> */}
     </div>
   );
 }
