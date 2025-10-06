@@ -1,4 +1,4 @@
-export default function ProfileIdPage({ params }: any) {
+export default async function ProfileIdPage({ params }: any) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-black">
       <h1 className="text-4xl font-bold mb-4 text-white">

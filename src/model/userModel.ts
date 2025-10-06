@@ -3,17 +3,17 @@ import mongoose from "mongoose";
 const userSchema = new mongoose.Schema({
   email: {
     type: String,
-    required: true,
+    required: [true, "Email is required"],
     unique: true
   },
   username: {
     type: String,
-    required: true,
+    required: [true, "Username is required"],
     unique: true
   },
   password: {
     type: String,
-    required: true,
+    required: [true, "Password is required"],
   },
   passwordSalt: {
     type: String,
@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
   role: {
     type: String,
     enum: ["user", "admin"],
-    required: true,
+    required: [true, "Role is required"],
     default: "user",
   },
   isVerified: {
