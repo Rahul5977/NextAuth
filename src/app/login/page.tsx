@@ -24,7 +24,7 @@ export default function LoginPage() {
       setLoading(true);
       const response = await axios.post("/api/users/login", user);
       if (response.status === 200) {
-        router.push("/profile");
+        router.push(`/profile/${response.data._id}`);
       } else {
         alert("Invalid credentials");
       }
